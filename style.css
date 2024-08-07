@@ -123,6 +123,7 @@
   .right-container {
     order: -1; 
     justify-content: center;
+     margin-top: 40px;
   }
 
   .right-container > img {
