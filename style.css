@@ -36,7 +36,7 @@
   min-height: 64px;
   position: fixed;
   /* backdrop-filter: blur(8px); */
-  border-bottom: 2px solid var(--highlight-color);
+/*   border-bottom: 2px solid var(--highlight-color); */
 
   z-index: 1000;
 }
@@ -123,11 +123,10 @@
   .right-container {
     order: -1; 
     justify-content: center;
-     margin-top: 40px;
   }
 
   .right-container > img {
-    margin-top: 40px;
+    margin-top: 24px;
     margin-left: 0px;
     transform: scale(1.9); 
   }
