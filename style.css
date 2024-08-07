@@ -1,0 +1,138 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+:root {
+  --background-color: #090909;
+  --text-color: antiquewhite;
+  --highlight-color: #00ff00;
+  --font-family: "Orbitron", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+/* Main Layout */
+#main {
+  width: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+#navbar {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  min-height: 64px;
+  position: fixed;
+  /* backdrop-filter: blur(8px); */
+  border-bottom: 2px solid var(--highlight-color);
+
+  z-index: 1000;
+}
+
+#navbar > #nav-icon {
+  display: none;  
+}
+
+#navbar > ul {
+  width: 50%;
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  justify-content: center;
+
+  flex: 1;
+}
+#navbar > #theme-toggle {
+  margin-left: auto;
+  background-color: var(--background-color);
+  border: none;
+}
+
+#light-mode {
+  display: none;
+  
+}
+/* Responsive Navigation */
+@media screen and (max-width: 700px) {
+  #navbar > #nav-icon {
+    display: block;
+  }
+
+  #navbar > ul {
+    display: none;
+  }
+
+  #navbar {
+    justify-content: flex-start;
+  }
+}
+
+/* Main Container */
+#main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Home Section */
+#main-container > #home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.left-container,
+.right-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left-container {
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.right-container > img {
+  width: 240px;
+  transform: scale(2);
+  margin-left: 36px;
+}
+
+/* Responsive Hero Container */
+@media screen and (max-width: 700px) {
+  .left-container {
+    justify-content: flex-start; 
+  }
+
+  .right-container {
+    order: -1; 
+    justify-content: center;
+  }
+
+  .right-container > img {
+    margin-top: 24px;
+    margin-left: 0px;
+    transform: scale(1.9); 
+  }
+
+  #home {
+    display: flex; /* Ensure #home is a flex container */
+    flex-direction: column; /* Stack items vertically */
+  }
+}
