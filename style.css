@@ -111,7 +111,9 @@
   align-items: flex-end;
   z-index: 2;
 }
-
+.left-container > h2{
+  color: var(--highlight-color);
+}
 .right-container > img {
   width: 240px;
   transform: scale(2);
