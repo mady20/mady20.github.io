@@ -36,8 +36,8 @@
   flex-wrap: wrap;
   min-height: 64px;
   position: fixed;
-  /* backdrop-filter: blur(8px); */
-/*   border-bottom: 2px solid var(--highlight-color); */
+  backdrop-filter: blur(7px);
+  /* border-bottom: 2px solid var(--highlight-color); */
 
   z-index: 1000;
 }
@@ -55,7 +55,11 @@
 
   flex: 1;
 }
-#navbar > ul > li:hover{
+#navbar > ul > a{
+  text-decoration: none;
+  color: inherit;
+}
+#navbar > ul > a:hover{
   color:var(--highlight-color);
 }
 #navbar > #theme-toggle {
@@ -88,6 +92,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 24px;
+  padding: 44px;
 }
 
 /* Home Section */
@@ -141,4 +147,81 @@
     display: flex; /* Ensure #home is a flex container */
     flex-direction: column; /* Stack items vertically */
   }
+}
+
+
+#main-container > #skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 24px;
+}
+
+#skills > .skills-container{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.skills-container > div{
+  border: 2px solid white;
+  padding: 12px;
+  border-radius: 12px;
+}
+#main-container > #projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#projects > .projects-container{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.project-card{
+  display: flex;
+  gap: 24px;
+}
+.project-card > .project-thumbnail > img{
+  width: 200px;
+  height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.199);
+}
+
+.project-card > .project-details{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+}
+.project-details > .header{
+  color: var(--highlight-color);
+}
+
+
+#main-container > #socials {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 24px;
+}
+#socials > .socials-container{
+  display: flex;
+  gap: 36px;
+}
+
+a{
+  color: var(--text-color);
 }
